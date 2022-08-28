@@ -1,0 +1,49 @@
+:root {
+  --list-height: 50vh;
+  --loading-height: 10vh;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-height: var(--list-height);
+  margin: 10px;
+}
+
+.list {
+  max-height: var(--list-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.list li {
+  height: 5vh;
+}
+
+.loading {
+  position: absolute;
+  bottom: calc(-1 *var(--loading-height));
+  display: none;
+  width: 100%;
+  height: var(--loading-height);
+}
+.loading.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
